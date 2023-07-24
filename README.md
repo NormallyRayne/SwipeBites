@@ -11,13 +11,13 @@ Get ready for a thrilling experience as you effortlessly swipe through a handpic
 We understand that everyone's taste is unique, and that's why SwipeBites caters to your palate. Indicate your preferred cuisine types, dietary requirements, and budget, and let the app curate restaurant choices that align perfectly with your preferences. With SwipeBites, every dining experience becomes a delightful journey tailored just for you.
 
 **Unearth Hidden Culinary Gems:**
-Gone are the days of sticking to the same old eateries. SwipeBites helps you break free from routine and explore hidden culinary gems that might have gone unnoticed. Venture into an uncharted gastronomic territory, and savor flavors that will leave you craving for more. 🌟🔍
+Gone are the days of sticking to the same old eateries. SwipeBites helps you break free from routine and explore hidden culinary gems that might have gone unnoticed. Venture into an uncharted gastronomic territory, and savor flavors that will leave you craving for more. 
 
 **Real Reviews, Trusted Recommendations:**
 Make informed decisions with confidence, thanks to the wealth of information provided by SwipeBites. Read genuine reviews and ratings from fellow food enthusiasts who have experienced these restaurants firsthand. From cozy cafes to fine dining establishments, our app equips you with all the insights you need to make each dining choice a memorable one. 
 
 **Plan and Share Your Culinary Adventures:**
-Found the perfect spot for a romantic dinner or a casual lunch date with friends? SwipeBites makes it easy to plan and organize your dining adventures. Save your favorite restaurants to revisit later, or share your discoveries with friends through the app. Let the joy of good food bring people together. 🗓️🗺️💬
+Found the perfect spot for a romantic dinner or a casual lunch date with friends? SwipeBites makes it easy to plan and organize your dining adventures. Save your favorite restaurants to revisit later, or share your discoveries with friends through the app. Let the joy of good food bring people together. 
 
 **Seamless Integration with Yelp:**
 SwipeBites seamlessly integrates with Yelp, providing you with access to a wealth of restaurant information, including contact details, menus, and directions. Make reservations directly from the app and experience a smooth and hassle-free dining journey. 
