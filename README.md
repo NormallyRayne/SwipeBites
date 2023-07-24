@@ -22,4 +22,4 @@ Found the perfect spot for a romantic dinner or a casual lunch date with friends
 **Seamless Integration with Yelp:**
 SwipeBites seamlessly integrates with Yelp, providing you with access to a wealth of restaurant information, including contact details, menus, and directions. Make reservations directly from the app and experience a smooth and hassle-free dining journey. 🌐🗺️👌
 
-Download SwipeBites today and embark on a delectable exploration of your local dining scene. With the thrill of swiping and the delight of discovering new tastes, your culinary adventure begins now. Unleash your inner foodie with SwipeBites - where every swipe leads to a delectable delight! 🎉🌮🌟
+Try SwipeBites today and embark on a delectable exploration of your local dining scene. With the thrill of swiping and the delight of discovering new tastes, your culinary adventure begins now. Unleash your inner foodie with SwipeBites - where every swipe leads to a delectable delight! 🎉🌮🌟
