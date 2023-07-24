@@ -1,6 +1,6 @@
 # SwipeBites
 
-Introducing "SwipeBites" - Your Personalized Restaurant Discovery App! 🍔🌮🍕
+Introducing **SwipeBites** - Your Personalized Restaurant Discovery App! 🍔🌮🍕
 
 SwipeBites is an innovative app that combines the excitement of swiping with the joy of discovering delectable dining options right in your neighborhood. Whether you're a foodie searching for your next culinary adventure or someone looking for a convenient place to grab a quick bite, SwipeBites is your ultimate guide to local restaurant exploration. 🍽️🌟
 
