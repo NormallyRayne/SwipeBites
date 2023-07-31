@@ -129,9 +129,9 @@ body {
 .tinder--buttons button {
     border-radius: 50%;
     line-height: 60px;
-    width: 60px;
+    width: 145px;
     border: 0;
-    background: #FFFFFF;
+    background: #CCFBFE;
     display: inline-block;
     margin: 0 8px;
 }
@@ -146,11 +146,11 @@ body {
 }
 
 .fa-heart {
-    background-image: 
+    
 }
 
 .fa-remove {
-    color: #CDD6DD;
+    
 }
 
 /* End of swipe feature */
