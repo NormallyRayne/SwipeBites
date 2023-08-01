@@ -1,59 +1,99 @@
+// Resturant location API
+async function restaurantsLocationApi() {
+  const url = 'https://worldwide-restaurants.p.rapidapi.com/typeahead';
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
+      'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com',
+    },
+    body: new URLSearchParams({
+      language: 'en_US',
+      q: "Miami"
+
+    }),
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    return result
+  } catch (error) {
+    console.error(error);
+  }
+}
 // First API
 async function restaurantsApi() {
-    const url = 'https://worldwide-restaurants.p.rapidapi.com/reviews';
-    const options = {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-        'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
-        'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com',
-      },
-      body: new URLSearchParams({
-        currency: 'USD',
-        limit: '20',
-        language: 'en_US',
-        location_id: '15333482',
-      }),
-    };
-  
-    try {
-      const response = await fetch(url, options);
-      console.log(response);
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
+  var location = await restaurantsLocationApi()
+  // var location= await  restaurantsLocationApi().results.data[0].result_object.location_id
+  const url = 'https://worldwide-restaurants.p.rapidapi.com/search';
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
+      'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com',
+    },
+    body: new URLSearchParams({
+      currency: 'USD',
+      limit: '20',
+      language: 'en_US',
+      location_id: location.results.data[0].result_object.location_id
+
+    }),
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    return result
+  } catch (error) {
+    console.error(error);
   }
-  
-  // Call the asynchronous function
-  restaurantsApi();
-  
-  // Second API
-  async function secondApi() {
-    const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
-        'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com',
-      },
-    };
-  
-    try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
+}
+
+async function modifyCard() {
+  var restaurantsAr = await restaurantsApi();
+  console.log(restaurantsAr);
+  for (let i = 1; i < 6; i++) {
+    console.log()
+    var cardTitleEl = document.getElementById(`card${i}Title`)
+    var cardReviewEl = document.getElementById("card" + i + "Review")
+    cardTitleEl.innerHTML = restaurantsAr.results.data[i].name
+    cardReviewEl.innerHTML = restaurantsAr.results.data[i].description
   }
-  
-  // Call the second API function
-  secondApi();
-  
+
+}
+// Call theichronous function
+modifyCard();
+// Second API
+async function secondApi() {
+  const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
+      'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com',
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Call the second API function
+secondApi();
+
 //   Swipe feature 
-  'use strict';
+'use strict';
 
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
@@ -68,7 +108,7 @@ function initCards(card, index) {
     card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
     card.style.opacity = (10 - index) / 10;
   });
-  
+
   tinderContainer.classList.add('loaded');
 }
 
@@ -152,3 +192,4 @@ nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 
 // End of swipe feature
+
