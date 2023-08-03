@@ -2,6 +2,8 @@ Introducing **SwipeBites** - Your Personalized Restaurant Discovery website!
 
 SwipeBites is an innovative website that combines the excitement of swiping with the joy of discovering delectable dining options right in your neighborhood. Whether you're a foodie searching for your next culinary adventure or someone looking for a convenient place to grab a quick bite, SwipeBites is your ultimate guide to local restaurant exploration.
 
+**NOTE! NOT ALL FEATURES HAVE BEEN DEVELOPED YET
+
 **Discover Nearby Restaurants with a Swipe:**
 Get ready for a thrilling experience as you effortlessly swipe through a handpicked selection of nearby restaurants. With a simple right swipe, you express your interest in a restaurant, and with a left swipe, you move on to the next option. As you explore, SwipeBites refines its suggestions based on your preferences, ensuring each swipe brings you closer to your perfect dining match.
 
