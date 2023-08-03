@@ -27,7 +27,7 @@ async function restaurantsLocationApi() {
 // First API
 async function restaurantsApi() {
   var location = await restaurantsLocationApi()
-  // var location= await  restaurantsLocationApi().results.data[0].result_object.location_id
+
   const url = 'https://worldwide-restaurants.p.rapidapi.com/search';
   const options = {
     method: 'POST',
@@ -67,27 +67,48 @@ async function modifyCard() {
   }
 
 }
-// Call theichronous function
+// Call the Asynchronous function
 modifyCard();
 // Second API
+async function weatherApi() {
+  const options = {
+    method: 'POST',
+    headers: {}
+  //   // body: new URLSearchParams({
+  //   //   temp:
+  //   //   humidity:
+  //   //   wind speed:
+  //   }
+  // }
+
+  // try {
+  //   const response = await fetch(url);
+  //   const result = await response.json();
+  //   console.log(result);
+  // } catch (error) {
+  //   console.error(error);
+  }
+}
+
 async function secondApi() {
-  const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=Miami&units=imperial&appid=4ebaaab317fa6d57e537202816ef42eb';
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
-      'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com',
+      //     'X-RapidAPI-Key': '61185c9298msh05e9087888395dap1a2be8jsnc2195cf9db75',
+      //     'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com',
     },
   };
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url);
     const result = await response.json();
     console.log(result);
   } catch (error) {
     console.error(error);
   }
 }
+
 
 // Call the second API function
 secondApi();
@@ -193,3 +214,44 @@ love.addEventListener('click', loveListener);
 
 // End of swipe feature
 
+let rightSwipedRestaurants = [];
+
+// Add event listeners for right swipes
+love.addEventListener('click', function (event) {
+  handleSwipe(true);
+  event.preventDefault();
+});
+
+function handleSwipe(isRightSwipe) {
+  var cards = document.querySelectorAll('.tinder--card:not(.removed)');
+  var moveOutWidth = document.body.clientWidth * 1.5;
+
+  if (!cards.length) return false;
+
+  var card = cards[0];
+
+  card.classList.add('removed');
+
+  if (isRightSwipe) {
+    // If it's a right swipe, store the ID of the right-swiped restaurant in the array
+    const restaurantID = card.getAttribute('data-restaurant-id');
+    rightSwipedRestaurants.push(restaurantID);
+    // Save the array in local storage
+    localStorage.setItem('rightSwipedRestaurants', JSON.stringify(rightSwipedRestaurants));
+
+    card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+    console.log('Right-swiped restaurant ID:', restaurantID);
+    console.log('Updated rightSwipedRestaurants:', rightSwipedRestaurants);
+  } else {
+
+    card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+  }
+
+  initCards();
+}
+
+// Retrieve the right swipes from local storage, if any
+const cachedRightSwipes = localStorage.getItem('rightSwipedRestaurants');
+if (cachedRightSwipes) {
+  rightSwipedRestaurants = JSON.parse(cachedRightSwipes);
+}
