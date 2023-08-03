@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background: #CCFBFE;
+    background-image: linear-gradient(to right, #ffcaea , #3e89bb);
     overflow: hidden;
     font-family: sans-serif;
 }
@@ -128,10 +128,10 @@ body {
 
 .tinder--buttons button {
     border-radius: 50%;
-    line-height: 60px;
+    line-height: 65px;
     width: 145px;
     border: 0;
-    background: #CCFBFE;
+    background: #ccfbfe00;
     display: inline-block;
     margin: 0 8px;
 }
@@ -153,4 +153,7 @@ body {
     
 }
 
+.love, .nope {
+
+}
 /* End of swipe feature */
