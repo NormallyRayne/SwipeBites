@@ -4,6 +4,10 @@ SwipeBites is an innovative website that combines the excitement of swiping with
 
 **NOTE! NOT ALL FEATURES HAVE BEEN DEVELOPED YET
 
+*A screenshot of the project
+
+![SwipeBites](https://github.com/NormallyRayne/SwipeBites/assets/80601826/7c5b8046-4a4c-4b17-a6b4-fd165a69dd53)
+
 **Discover Nearby Restaurants with a Swipe:**
 Get ready for a thrilling experience as you effortlessly swipe through a handpicked selection of nearby restaurants. With a simple right swipe, you express your interest in a restaurant, and with a left swipe, you move on to the next option. As you explore, SwipeBites refines its suggestions based on your preferences, ensuring each swipe brings you closer to your perfect dining match.
 
